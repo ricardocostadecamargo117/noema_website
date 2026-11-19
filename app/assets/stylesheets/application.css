@@ -1,0 +1,417 @@
+
+/* =====================================
+   NOEMA - DESIGN SYSTEM
+===================================== */
+
+:root {
+    --color-background: #FFFFFF;
+    --color-surface: #F7F6FA;
+    --color-primary: #7665D8;
+    --color-primary-light: #A99CEB;
+    --color-text: #252536;
+    --color-secondary: #777486;
+    --color-border: #EAE8EF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 9%;
+    border-bottom: 1px solid var(--color-border);
+    background: white;
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: var(--color-text);
+}
+
+.navigation {
+    display: flex;
+    gap: 35px;
+}
+
+.navigation a {
+    color: var(--color-secondary);
+    font-size: 14px;
+    transition: color .2s;
+}
+
+.navigation a:hover {
+    color: var(--color-primary);
+}
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+    min-height: 690px;
+    padding: 105px 20px 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--color-primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    max-width: 850px;
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.12;
+    letter-spacing: -3px;
+    font-weight: 700;
+}
+
+.hero h1 span {
+    color: var(--color-primary);
+}
+
+.hero > p {
+    max-width: 580px;
+    color: var(--color-secondary);
+    margin-top: 25px;
+    font-size: 17px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 32px;
+}
+
+.button-primary,
+.button-secondary {
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.button-primary {
+    color: white;
+    background: var(--color-primary);
+}
+
+.button-primary:hover {
+    background: #6252C0;
+    transform: translateY(-2px);
+}
+
+.button-secondary {
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+}
+
+.button-secondary:hover {
+    border-color: var(--color-primary);
+}
+
+/* =====================================
+   VISUAL DE GRAFOS
+===================================== */
+
+.hero-visual {
+    width: min(650px, 90%);
+    height: 220px;
+    margin-top: 65px;
+    position: relative;
+    background: radial-gradient(
+        ellipse,
+        #F0EDFC 0%,
+        #FFFFFF 72%
+    );
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.graph-center,
+.graph-node {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    z-index: 2;
+}
+
+.graph-center {
+    top: 78px;
+    left: calc(50% - 48px);
+    width: 96px;
+    height: 48px;
+    background: var(--color-primary);
+    color: white;
+    font-weight: bold;
+}
+
+.graph-node {
+    padding: 9px 15px;
+    background: white;
+    border: 1px solid #DCD5F7;
+    color: var(--color-text);
+    font-size: 12px;
+    box-shadow: 0 5px 20px #7665D81A;
+}
+
+.node-one {
+    top: 25px;
+    left: 12%;
+}
+
+.node-two {
+    top: 35px;
+    right: 13%;
+}
+
+.node-three {
+    bottom: 25px;
+    left: 15%;
+}
+
+.node-four {
+    bottom: 25px;
+    right: 12%;
+}
+
+/* =====================================
+   SEÇÕES
+===================================== */
+
+.section {
+    padding: 100px 9%;
+    text-align: center;
+}
+
+.section h2,
+.download-section h2 {
+    font-size: clamp(30px, 4vw, 43px);
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.section > p {
+    max-width: 700px;
+    margin: auto;
+    color: var(--color-secondary);
+    font-size: 16px;
+}
+
+.about {
+    background: var(--color-surface);
+}
+
+/* =====================================
+   FUNCIONALIDADES
+===================================== */
+
+.features {
+    background: white;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 55px;
+    text-align: left;
+}
+
+.feature-card {
+    padding: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 13px;
+    transition: .2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-primary-light);
+    box-shadow: 0 12px 35px #2525360D;
+}
+
+.feature-icon {
+    font-size: 30px;
+    color: var(--color-primary);
+    margin-bottom: 22px;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--color-secondary);
+    font-size: 14px;
+}
+
+/* =====================================
+   DOWNLOAD
+===================================== */
+
+.download-section {
+    padding: 100px 20px;
+    background: #F4F1FD;
+    text-align: center;
+}
+
+.download-section h2 {
+    max-width: 650px;
+    margin: 0 auto 20px;
+}
+
+.download-section > p {
+    max-width: 550px;
+    margin: auto;
+    color: var(--color-secondary);
+}
+
+.download-status {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 20px;
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-secondary);
+    font-size: 13px;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+    padding: 45px 9%;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.footer p {
+    margin: 15px 0;
+    color: var(--color-secondary);
+    font-size: 13px;
+}
+
+.footer > span {
+    color: #A09DAB;
+    font-size: 12px;
+}
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 700px) {
+
+    .main-header {
+        padding: 20px 5%;
+    }
+
+    .navigation {
+        gap: 13px;
+    }
+
+    .navigation a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding-top: 75px;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero > p {
+        font-size: 15px;
+    }
+
+    .hero-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-visual {
+        margin-top: 45px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section,
+    .download-section {
+        padding: 75px 6%;
+    }
+
+    .node-one {
+        left: 2%;
+    }
+
+    .node-two {
+        right: 2%;
+    }
+
+    .node-three {
+        left: 2%;
+    }
+
+    .node-four {
+        right: 2%;
+    }
+}
+
+@media (max-width: 400px) {
+    .navigation {
+        gap: 9px;
+    }
+
+    .navigation a {
+        font-size: 11px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+}
