@@ -415,3 +415,73 @@ a {
         font-size: 24px;
     }
 }
+
+/* CARTÃO DE DOWNLOAD */
+
+.download-card {
+  width: min(100%, 520px);
+  margin: 42px auto 0;
+  padding: 36px;
+  text-align: left;
+  background: #FFFFFF;
+  border: 1px solid #EAE8EF;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(37, 37, 54, 0.05);
+}
+
+.download-platform {
+  display: inline-block;
+  padding: 6px 12px;
+  color: #7665D8;
+  background: #F1EEFF;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.download-info h3 {
+  margin: 20px 0 8px;
+  color: #252536;
+  font-size: 22px;
+}
+
+.download-info p {
+  margin-bottom: 24px;
+  color: #777486;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.download-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 0;
+  margin-bottom: 22px;
+  border-top: 1px solid #EAE8EF;
+  border-bottom: 1px solid #EAE8EF;
+  color: #777486;
+  font-size: 13px;
+}
+
+.download-card .button-primary {
+  width: 100%;
+  border: none;
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.download-card small {
+  display: block;
+  margin-top: 14px;
+  color: #9995A5;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .download-card {
+    padding: 24px;
+  }
+}
