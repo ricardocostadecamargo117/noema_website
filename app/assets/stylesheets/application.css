@@ -485,3 +485,119 @@ a {
     padding: 24px;
   }
 }
+
+
+/* PLATAFORMAS DE DOWNLOAD */
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: min(100%, 1100px);
+  margin: 48px auto 0;
+}
+
+.platform-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px;
+  text-align: left;
+  background: #FFFFFF;
+  border: 1px solid #EAE8EF;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(37, 37, 54, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.platform-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(37, 37, 54, 0.08);
+}
+
+.platform-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 24px;
+  color: #7665D8;
+  background: #F1EEFF;
+  border-radius: 14px;
+  font-size: 28px;
+}
+
+.platform-label {
+  color: #7665D8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.platform-card h3 {
+  margin: 14px 0 8px;
+  color: #252536;
+  font-size: 20px;
+}
+
+.platform-card p {
+  min-height: 48px;
+  margin-bottom: 20px;
+  color: #777486;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.platform-status {
+  margin-bottom: 20px;
+  color: #9995A5;
+  font-size: 12px;
+}
+
+.platform-card .button-primary {
+  width: 100%;
+  margin-top: auto;
+  padding: 13px 16px;
+  border: none;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .platform-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .platform-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .platform-card {
+    padding: 26px;
+  }
+}
+
+/* LOGO NOEMA */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  display: block;
+  width: 52px;
+  height: auto;
+  object-fit: contain;
+
+    filter: brightness(0) saturate(100%);
+}
+
+.footer .logo img {
+  width: 46px;
+}
